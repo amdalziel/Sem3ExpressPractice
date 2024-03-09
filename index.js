@@ -9,26 +9,22 @@ global.DEBUG = true;
 
 const locationsDal = require('./services/bk.locations'); 
 
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
 
-
-
 app.get('/', async (req, res) => {
-    if(DEBUG) console.log('Route: /'); 
-    
-    try {
-        const getLocations = await locationsDal.getLocations(); 
-        if(DEBUG) console.table(getLocations); 
-        res.render('locations', { location: getLocations }); 
-        
-    } catch (error) {
-        res.status(503); 
-        res.send('Error' + error); 
-        
-    }
+    res.render('index.ejs', {name: 'Amy'}); 
 }); 
+
+const bkLocations = require('./routes/locations');
+app.use('/locations', bkLocations); 
+
+const bkBeer = require('./routes/beer');
+app.use('/beer', bkBeer); 
+
+
 
 
 

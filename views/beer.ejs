@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer</title>
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+</head>
+<body>
+
+    <h1>Beer Page</h1>
+
+    <div id="battleBeer-banner">
+        <h2>Battle of the Beer</h2>
+        <canvas id="beerGraph" style="width:100%;max-width:700px"></canvas>
+    </div>
+
+    <% beer.forEach(singleBeer => { %>
+        <p>Beer Type: <%= singleBeer.beer_type %></p>
+        <p>Beer Name: <%= singleBeer.beer_name %></p>
+        <p>Price Single: <%= singleBeer.price_single %></p>
+        <p>--------------------------------------------------------</p>
+   
+    <% }); %>
+
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>
