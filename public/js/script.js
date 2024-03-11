@@ -1,6 +1,7 @@
 
 // Displaying Battle of the Beer data 
 
+// Colors for different parts of the pie chart (match website colors)
 const background_colors = {
     brightYellow: '#F2A007',
     brightOrange: '#F28F16',
@@ -10,6 +11,7 @@ const background_colors = {
 }; 
 
 
+// Communicate with server-side code - fetch GET request made in index.js 
 const fetchBeerData = async () => {
     try {
         const response = await fetch('/api/beer');
@@ -66,6 +68,11 @@ let bannerImg = [
     { id: 1, url: "images/slide1.jpg" },
     { id: 2, url: "images/slide2.jpg" },
     { id: 3, url: "images/slide3.jpg" },
+    { id: 4, url: "images/slide4.jpg" },
+    // { id: 5, url: "images/slide5.jpg" },
+    { id: 6, url: "images/slide6.jpg" },
+    { id: 7, url: "images/slide7.jpg" },
+    // { id: 8, url: "images/slide8.jpg" },
 ];
 
 let currBannerImg = 0; 
@@ -82,7 +89,7 @@ function nextBannerUrl() {
 
 function nextBannerUrl() {
     currBannerImg++;
-    console.log(currBannerImg); 
+    // console.log(currBannerImg); 
     if (currBannerImg === bannerImg.length) {
         currBannerImg = 0;
     }
