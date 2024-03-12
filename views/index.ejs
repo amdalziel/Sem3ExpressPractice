@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Kind Brewery</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter&family=Kalam&family=Noto+Sans+Symbols+2&family=Playfair:opsz@5..1200&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <%- include('./partials/header.ejs') %>
 <body>
 
-    <div id="battleBeer-banner">
+    <div id="battleBeer-banner" class="banner1-settings">
 
-        <img src = "" id= "rotating-banner" alt="Rotating Beer Images" width="100%" height="100%">
+        <img src = "" id= "rotating-banner" alt="Rotating Beer Images" width="100%" height="500px">
     
         <h2>Battle of the Beer</h2>
-        <canvas id="beerGraph" style="width:100%;max-width:700px"></canvas>
+        <h4>Eight beers battle to become the <br> 'Best Beer of 2024'</h4>
+        <a href="/beer">Cast Your Vote</a>
+
     </div>
 
     
